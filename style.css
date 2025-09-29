@@ -747,71 +747,46 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0.5rem 0.7rem;
     min-height: 48px;
+    position: relative;
   }
   .logo {
-    font-size: 1.3rem;
-    padding-right: 0.5rem;
-  }
-  .nav-links {
-    position: absolute;
-    top: 48px;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    width: 70vw;
-    max-width: 260px;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 100;
-    font-size: 1rem;
-  }
-  .nav-links.open {
-    height: 180px;
-    padding: 0.5rem 0;
-  }
-  .nav-links li {
-    margin: 0.7rem 0;
-    text-align: right;
-  }
-  .burger {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
-    z-index: 101;
-    margin-left: 0.5rem;
+    align-items: center;
   }
-  .burger span {
-    height: 2px;
-    width: 22px;
-    background: #777054;
-    margin: 3px 0;
-    border-radius: 2px;
-    transition: all 0.3s;
+  .nav-links,
+  .burger {
+    display: none !important;
   }
 
   /* Splash image and hero text */
   .splash {
-    padding: 0.5rem 0;
+    padding: 0.2rem 0 0.2rem 0;
+    margin-bottom: 0.5rem;
   }
   .hero-image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
     width: 100%;
+    margin-bottom: 0.5rem;
   }
   .hero-poster {
     width: 100%;
     max-width: 320px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     object-fit: cover;
   }
   .hero-text h1 {
@@ -890,6 +865,31 @@ footer {
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.back-to-top.visible {
+    opacity: 0.6;
+    visibility: visible;
+    transform: translateY(0);
+    animation: float 6s ease-in-out infinite;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    background: #DECEBF;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    animation: none;
+}
+
+.back-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: translateY(-2px);
+}
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
