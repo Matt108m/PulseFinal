@@ -26,7 +26,7 @@
                 <span></span>
                 <span></span>
             </div>
-        </nav>
+        </nav> 
     </header>
     <main>
         <section id="home" class="splash">
