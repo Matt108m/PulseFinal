@@ -749,28 +749,34 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 0.7rem;
+    min-height: 48px;
+  }
+  .logo {
+    font-size: 1.3rem;
+    padding-right: 0.5rem;
   }
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 48px;
     right: 0;
     background: #fff;
     flex-direction: column;
     width: 70vw;
-    max-width: 300px;
+    max-width: 260px;
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     z-index: 100;
+    font-size: 1rem;
   }
   .nav-links.open {
-    height: 220px;
-    padding: 1rem 0;
+    height: 180px;
+    padding: 0.5rem 0;
   }
   .nav-links li {
-    margin: 1rem 0;
+    margin: 0.7rem 0;
     text-align: right;
   }
   .burger {
@@ -778,77 +784,73 @@ footer {
     flex-direction: column;
     cursor: pointer;
     z-index: 101;
+    margin-left: 0.5rem;
   }
   .burger span {
-    height: 3px;
-    width: 25px;
+    height: 2px;
+    width: 22px;
     background: #777054;
-    margin: 4px 0;
+    margin: 3px 0;
     border-radius: 2px;
     transition: all 0.3s;
   }
-  .logo {
-    font-size: 2rem;
+
+  /* Splash image and hero text */
+  .splash {
+    padding: 0.5rem 0;
   }
   .hero-image-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
+    width: 100%;
   }
   .hero-poster {
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
     height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
   }
   .hero-text h1 {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
+    text-align: center;
   }
   .hero-text p {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
+    text-align: center;
   }
-  .about-main-heading,
-  .classes-main-heading,
-  .contact-main-heading {
+
+  /* About Us section: stack cards vertically */
+  .about-animated {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .about-card {
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 0.7rem;
+  }
+  .about-heading,
+  .about-desc {
+    text-align: center;
+  }
+  .about-main-heading {
     font-size: 2rem !important;
-  }
-  .about-card,
-  .class-card {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-  .about-img,
-  .class-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-  .contact-images {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-card {
-    width: 90%;
-    margin: 1rem 0;
-  }
-  footer {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  #backToTop {
-    right: 1rem;
-    bottom: 1rem;
-    font-size: 1.2rem;
-    padding: 0.5rem 0.7rem;
+    margin-bottom: 1.2rem !important;
   }
 }
 
@@ -889,7 +891,6 @@ footer {
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 1000;
 }
 
 .back-to-top.visible {
