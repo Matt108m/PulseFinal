@@ -702,6 +702,172 @@ footer {
     }
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-animated-section, .classes-section, .contact-section {
+    padding: 2rem 1rem;
+  }
+  .about-animated {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-card {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .classes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .class-card {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-images {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .contact-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact-card {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 70vw;
+    max-width: 300px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  .nav-links.open {
+    height: 220px;
+    padding: 1rem 0;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: right;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .burger span {
+    height: 3px;
+    width: 25px;
+    background: #777054;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .hero-image-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .hero-poster {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+  }
+  .hero-text p {
+    font-size: 1.2rem !important;
+  }
+  .about-main-heading,
+  .classes-main-heading,
+  .contact-main-heading {
+    font-size: 2rem !important;
+  }
+  .about-card,
+  .class-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .about-img,
+  .class-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  .contact-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-card {
+    width: 90%;
+    margin: 1rem 0;
+  }
+  footer {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  #backToTop {
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* Ensure images and cards are always responsive */
+.hero-poster,
+.about-img,
+.class-image,
+.contact-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Hide burger menu on desktop */
+.burger {
+  display: none;
+}
+
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
