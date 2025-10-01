@@ -779,7 +779,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     overflow: hidden;
   }
@@ -792,12 +792,12 @@ footer {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 0;
     left: 0;
     right: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
   }
   .hero-poster {
     width: 100%;
@@ -807,128 +807,55 @@ footer {
     object-fit: cover;
     display: block;
     border-radius: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     z-index: 1;
   }
   .hero-text {
     position: absolute;
-    z-index: 2;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 0;
-    left: 0;
-    transform: none;
-    margin: 0;
-    height: 100%;
-    padding-top: 1.5rem;
     text-align: center;
+    pointer-events: none;
+    padding: 0 1rem;
   }
-  .hero-text h1 {
-    font-size: 2.2rem !important;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
+  .hero-text h1,
   .hero-text p {
-    font-size: 1.1rem !important;
-    text-align: center;
-    margin: 0.5rem auto 0 auto;
     width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.35);
   }
 
-  /* Classes section: images visible and responsive */
-  .classes-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .class-card {
-    width: 95%;
-    min-height: 220px;
-    margin-bottom: 2rem;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  .class-image {
-    width: 100%;
-    height: 180px;
-    min-height: 180px;
-    max-height: 220px;
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-    opacity: 1;
-  }
   .class-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 1rem;
-    background: linear-gradient(180deg, rgba(119,112,84,0.7) 0%, rgba(119,112,84,0.0) 60%, rgba(119,112,84,0.7) 100%);
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: background 0.3s ease;
     z-index: 2;
+    align-items: center;
+    padding-bottom: 1.5rem;
   }
   .class-title {
     color: #fff;
-    margin: 0;
+    margin: 0 0 0.7rem 0;
     font-size: 1.5rem;
     text-shadow: 0 2px 12px rgba(0,0,0,0.3);
     text-align: center;
     transform: translateY(0);
     transition: transform 0.3s ease;
+    z-index: 3;
+    position: relative;
   }
   .class-description {
-    font-family: 'Athene Voyage', serif !important;
-    font-size: 1rem;
-    color: #fff;
-    line-height: 1.5;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
     margin-bottom: 0.5rem;
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    text-align: center;
-  }
-
-  /* Contact info: previous layout */
-  .contact-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .contact-card {
-    width: 100%;
-    margin: 0;
-    min-width: 0;
-    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
   }
 }
 
@@ -993,29 +920,6 @@ footer {
 .back-to-top:hover i {
     transform: translateY(-2px);
 }
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .contact-card {
-    width: 100%;
-    margin: 0;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-}
-
-/* Ensure images and cards are always responsive */
-.hero-poster,
-.about-img,
-.class-image,
-.contact-img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
 /* Hide burger menu on desktop */
 .burger {
   display: none;
