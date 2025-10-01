@@ -747,65 +747,82 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0.7rem;
     min-height: 48px;
     position: relative;
   }
   .logo {
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+    font-size: 1.3rem;
+    padding-right: 0.5rem;
+    margin: 0;
+    text-align: left;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
-  .nav-links,
+  .nav-links {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 70vw;
+    max-width: 260px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+    font-size: 1rem;
+    display: flex !important;
+  }
+  .nav-links.open {
+    height: 180px;
+    padding: 0.5rem 0;
+  }
+  .nav-links li {
+    margin: 0.7rem 0;
+    text-align: right;
+  }
   .burger {
-    display: none !important;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+    margin-left: 0.5rem;
+  }
+  .burger span {
+    height: 2px;
+    width: 22px;
+    background: #777054;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
   }
 
   /* Splash image and hero text */
   .splash {
-    padding: 0;
-    margin-bottom: 0;
-    min-height: 60vh;
-    background: #222;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
   .hero-image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    width: 100vw;
-    margin-bottom: 0;
-    min-height: 60vh;
-    height: 60vh;
-    max-height: 100vh;
-    position: relative;
-    overflow: hidden;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
   .hero-poster {
-    width: 100vw;
-    height: 60vh;
-    min-height: 60vh;
-    max-height: 100vh;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
     object-fit: cover;
-    border-radius: 0;
-    margin-bottom: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .hero-text {
-    position: relative;
-    z-index: 2;
-    margin-top: 2.5rem;
   }
   .hero-text h1 {
     font-size: 2rem !important;
@@ -816,7 +833,7 @@ footer {
     text-align: center;
   }
 
-  /* Classes section: remove animation, ensure images visible */
+  /* Classes section: previous layout */
   .classes-container {
     flex-direction: column;
     align-items: center;
@@ -833,7 +850,6 @@ footer {
     box-shadow: none;
     border-radius: 0;
     overflow: hidden;
-    /* Remove hover animation for mobile */
     transform: none !important;
     transition: none !important;
     animation: none !important;
@@ -909,6 +925,20 @@ footer {
   .about-main-heading {
     font-size: 2rem !important;
     margin-bottom: 1.2rem !important;
+  }
+
+  /* Contact info: previous layout */
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .contact-card {
+    width: 100%;
+    margin: 0;
+    min-width: 0;
+    box-sizing: border-box;
   }
 }
 
