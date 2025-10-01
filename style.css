@@ -773,16 +773,20 @@ footer {
   .splash {
     padding: 0;
     margin: 0;
-    min-height: 100vw;
+    min-height: 40vh; /* Reduced whitespace */
     background: #222;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+    align-items: center;
   }
   .hero-image-container {
     position: relative;
     width: 100vw;
     max-width: 100vw;
-    height: calc(100vh - 56px); /* fill viewport minus navbar */
-    min-height: 400px;
+    height: 40vh; /* Reduced height for less whitespace */
+    min-height: 200px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -793,7 +797,7 @@ footer {
   .hero-poster {
     width: 100vw;
     height: 100%;
-    min-height: 400px;
+    min-height: 200px;
     object-fit: cover;
     display: block;
     border-radius: 0;
@@ -809,12 +813,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     top: 0;
     left: 0;
     transform: none;
     margin: 0;
     height: 100%;
+    padding-top: 1.5rem; /* Add some top padding */
   }
   .hero-text h1 {
     font-size: 2.2rem !important;
@@ -835,7 +840,7 @@ footer {
     align-items: center;
   }
 
-  /* Classes section: subtext font same as heading */
+  /* Classes section: subtext font only for mobile */
   .class-description {
     font-family: 'Athene Voyage', serif !important;
     font-size: 1rem;
