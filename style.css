@@ -794,17 +794,17 @@ footer {
     overflow: hidden;
   }
   .hero-image-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;     /* Match splash height */
-    min-height: 520px; /* Ensure image is tall enough */
+    height: 100vh;
+    min-height: 520px;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border-radius: 0;
     left: 0;
     right: 0;
+    width: 100%;
     display: block;
+    position: relative;
   }
   .hero-poster {
     width: 100%;
@@ -817,6 +817,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1;
   }
   .hero-text {
