@@ -95,20 +95,46 @@
             }
         }
 
-        /* Remove any gap between landing and booking on mobile */
-        .splash + .booking-section { margin-top: 0 !important; padding-top: 1rem !important; }
+        /* Aggressive mobile-first gap removal: all widths <=800px */
         @media (max-width: 800px) {
-            /* defensive rules to ensure no gap on mobile */
-            #home, .splash, .hero-image-container { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-            .booking-section { margin-top: 0 !important; padding-top: 0.75rem !important; }
-            .booking-row { flex-direction: column; gap: .75rem; }
-            .booking-container { padding-top: 0.5rem; }
-            .booking-heading { font-size: 1.6rem; }
-            .book-image { max-width: 60%; width: 220px; }
-            .book-left { align-items:center; text-align:center; }
-            .book-now-btn { width:100%; font-size:1.4rem; padding:0.9rem 1rem; }
-            /* force no top gap for about section on mobile */
-            .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
+            /* Force splash/hero to zero dimensions */
+            #home, .splash {
+                margin: 0 !important;
+                padding: 0 !important;
+                min-height: auto !important;
+                height: auto !important;
+                line-height: 0 !important;
+                font-size: 0 !important;
+            }
+            .hero-image-container {
+                margin: 0 !important;
+                padding: 0 !important;
+                display: block !important;
+                line-height: 0 !important;
+                font-size: 0 !important;
+            }
+            .hero-poster {
+                display: block !important;
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                line-height: 0 !important;
+            }
+            .hero-text {
+                display: none !important; /* Hide overlay text on mobile if it causes spacing */
+            }
+            /* Booking sits flush with zero gap */
+            .booking-section {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                padding-top: 1rem !important;
+            }
+            .about-animated-section, .about-animated {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
         }
 
         /* Target around 766 x 845 (narrow range) to remove mobile gap */
