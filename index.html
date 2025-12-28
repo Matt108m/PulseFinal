@@ -61,8 +61,12 @@
         .book-image { width: 280px; max-width: 35%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); object-fit:cover; transform-origin: center; }
         .book-image.animate { animation: float 4s ease-in-out infinite; }
 
-        /* Responsive: stack and remove gap between hero and about */
+        /* Remove any gap between landing and booking on mobile */
+        .splash + .booking-section { margin-top: 0 !important; padding-top: 1rem !important; }
         @media (max-width: 800px) {
+            /* defensive rules to ensure no gap on mobile */
+            #home, .splash, .hero-image-container { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+            .booking-section { margin-top: 0 !important; padding-top: 0.75rem !important; }
             .booking-container { flex-direction: column-reverse; align-items:center; gap:1rem; }
             .book-image { max-width: 60%; width: 220px; }
             .book-left { align-items:center; text-align:center; }
@@ -108,10 +112,9 @@
             <div class="booking-container">
                 <div class="book-left">
                     <h2>Ready to begin?</h2>
-                    <!-- removed subheading paragraph as requested -->
-                    <!-- Hidden field for future booking URL. Edit the value attribute later to attach the link. -->
-                    <input type="hidden" id="book-link" value="">
-                    <a id="book-now-anchor" class="book-now-btn pulse" href="#" role="button" aria-labelledby="book-now-text">
+                    <!-- Hidden field for booking URL (set to provided link) -->
+                    <input type="hidden" id="book-link" value="https://app.glofox.com/portal/#/branch/68e932be4a933b4b3808bfa4/classes-day-view">
+                    <a id="book-now-anchor" class="book-now-btn pulse" href="#" role="button" aria-labelledby="book-now-text" target="_blank" rel="noopener">
                         <span id="book-now-text">Book Now</span>
                         <i class="fas fa-chevron-right" aria-hidden="true"></i>
                     </a>
