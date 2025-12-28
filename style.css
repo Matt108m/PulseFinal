@@ -1078,3 +1078,20 @@ footer {
 .back-to-top:hover i {
     transform: translateY(-2px);
 }
+
+/* Extra-small devices: ≤756px width - remove grey gap */
+@media (max-width: 756px) {
+  .hero-image-container {
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .hero-poster {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .splash, #home {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
