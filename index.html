@@ -110,6 +110,17 @@
             /* force no top gap for about section on mobile */
             .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
         }
+
+        /* Target around 766 x 845 (narrow range) to remove mobile gap */
+        @media (min-width: 756px) and (max-width: 776px) and (min-height: 835px) and (max-height: 855px) {
+            /* remove any bottom spacing on hero */
+            #home, .splash, .hero-image-container { margin: 0 !important; padding: 0 !important; min-height: 0 !important; }
+            .hero-poster { display:block !important; width:100% !important; height:auto !important; object-fit: cover !important; margin:0 !important; }
+            /* make booking sit flush under hero */
+            .booking-section { margin-top: 0 !important; padding-top: 0.5rem !important; }
+            /* defensive: ensure no stray spacing on about section */
+            .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
+        }
     </style>
 </head>
 <body>
