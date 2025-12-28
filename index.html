@@ -110,6 +110,25 @@
             /* force no top gap for about section on mobile */
             .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
         }
+
+        /* Ensure hero fills vertically and removes grey gap on mobile */
+        .hero-image-container { overflow: hidden; margin: 0; padding: 0; }
+        .hero-poster {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        /* If the image is shorter than the area on mobile, force it to fill nicely */
+        @media (max-width: 800px) {
+            .hero-poster {
+                height: 60vh; /* fills most of the viewport on mobile */
+                min-height: 360px; /* fallback for very small viewports */
+            }
+            /* ensure the splash container does not add extra space */
+            .splash, #home { margin-bottom: 0 !important; padding-bottom: 0 !important; min-height: auto !important; }
+        }
     </style>
 </head>
 <body>
