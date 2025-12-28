@@ -121,6 +121,41 @@
             /* defensive: ensure no stray spacing on about section */
             .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
         }
+
+        /* Force no gap for narrow viewports (<=770px width) */
+        @media (max-width: 770px) {
+            .splash, #home {
+                margin: 0 !important;
+                padding: 0 !important;
+                min-height: auto !important;
+                height: auto !important;
+            }
+            .hero-image-container {
+                margin: 0 !important;
+                padding: 0 !important;
+                display: block !important;
+            }
+            .hero-poster {
+                display: block !important;
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                object-fit: cover !important;
+            }
+            .hero-text {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .splash + .booking-section, .booking-section {
+                margin-top: 0 !important;
+                padding-top: 0.5rem !important;
+            }
+            .about-animated-section, .about-animated {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
