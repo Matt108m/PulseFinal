@@ -31,10 +31,20 @@
         <section id="home" class="splash">
             <div class="hero-image-container">
                 <img src="IMG_6132.JPG" alt="Pulse Pilates Studio" class="hero-poster">
+                <div class="hero-text">
+                    <h1 class="animated-text" style="font-family: 'Athene Voyage', serif; color: #fff; font-size: 4rem;">Welcome to Pulse Pilates</h1>
+                    <p class="animated-text" style="font-family: 'Cinema Sunday', cursive; color: #fff; font-size: 2.2rem;">Your journey to wellness starts here.</p>
+                </div>
             </div>
-            <div class="hero-text">
-                <h1 class="animated-text" style="font-family: 'Athene Voyage', serif; color: #fff; font-size: 4rem;">Welcome to Pulse Pilates</h1>
-                <p class="animated-text" style="font-family: 'Cinema Sunday', cursive; color: #fff; font-size: 2.2rem;">Your journey to wellness starts here.</p>
+        </section>
+        <!-- Booking Section (added) -->
+        <section id="booking" class="booking-section" aria-label="Booking">
+            <div class="booking-container">
+                <!-- Hidden field for future booking URL. Edit the value attribute later to attach the link. -->
+                <input type="hidden" id="book-link" value="">
+                <a id="book-now-anchor" class="book-now-btn" href="#" role="button" aria-labelledby="book-now-text">
+                    <span id="book-now-text">Book Now</span>
+                </a>
             </div>
         </section>
         <!-- Animated About Us Section -->
@@ -46,7 +56,7 @@
                 </h1>
                 <div class="about-animated">
                 <div class="about-card about-left">
-                    <img src="A-Stand.jpg" alt="A Stand" class="about-img animated-about-img">
+                    <img src="a-stand.jpg" alt="A Stand" class="about-img animated-about-img">
                     <h2 class="about-heading animated-about-text">Our Studio</h2>
                     <p class="about-desc animated-about-text">Located in the heart of the city, we embody our commitment to accessibility in every form. Come and visit us!</p>
                 </div>
@@ -56,7 +66,7 @@
                     <p class="about-desc animated-about-text">We offer a versatile range of classes for all experience levels, from beginners to advanced, along with specialised sessions led by expert instructors.</p>
                 </div>
                 <div class="about-card about-right">
-                    <img src="Instagram.jpg" alt="Instagram" class="about-img animated-about-img">
+                    <img src="instagram.jpg" alt="Instagram" class="about-img animated-about-img">
                     <h2 class="about-heading animated-about-text">Our Community</h2>
                     <p class="about-desc animated-about-text">Our community is central to everything we do. We want every moment spent with us to feel welcoming and comfortable for everyone. We’re committed to continually learning and improving to make this even better.
 </p>
@@ -90,7 +100,7 @@
         <div class="class-overlay">
           <h2 class="class-title" style="font-family: 'Athene Voyage', serif;">Reformer Pilates</h2>
           <div class="class-description">
-            <p>Reformer Pilates uses the reformer machine for a dynamic, full-body workout—ranging from gentle rehab to challenging strength training. Fun, engaging, and open to all levels.</p>
+            <p>Reformer Pilates combines resistance and support from the reformer machine to create a dynamic, full-body workout. Offering everything from gentle rehabilitation to challenging strength training and always engaging and fun. Our classes welcome all levels.</p>
           </div>
         </div>
       </div>
@@ -107,7 +117,7 @@
                 <!-- Image Grid -->
                 <div class="contact-images">
                     <div class="image-container left">
-                        <img src="iPhone App.jpg" alt="Pulse Pilates App" class="contact-img">
+                        <img src="Iphone Bench.jpg" alt="Pulse Pilates App" class="contact-img">
                     </div>
                     <div class="image-container right">
                         <img src="Business card.jpg" alt="Business Card" class="contact-img">
@@ -158,6 +168,22 @@
         <i class="fas fa-chevron-up"></i>
     </button>
     <script src="scripts/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const input = document.getElementById('book-link');
+        const anchor = document.getElementById('book-now-anchor');
+        if(input && anchor){
+            const url = (input.value || '').trim();
+            if(url) anchor.setAttribute('href', url);
+            anchor.addEventListener('click', function(e){
+                const href = (anchor.getAttribute('href') || '').trim();
+                if(!href || href === '#'){
+                    e.preventDefault();
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>
 </html>
