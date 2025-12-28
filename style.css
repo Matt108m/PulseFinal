@@ -783,7 +783,6 @@ footer {
   .splash {
     padding: 0;
     margin: 0;
-    min-height: 100vh; /* Stretch splash section to fill viewport */
     background: #222;
     position: relative;
     display: flex;
@@ -794,27 +793,23 @@ footer {
     overflow: hidden;
   }
   .hero-image-container {
-    height: 100vh;
-    min-height: 520px;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border-radius: 0;
     left: 0;
     right: 0;
-    width: 100%;
     display: block;
     position: relative;
   }
   .hero-poster {
     width: 100%;
-    height: 100%;
-    min-height: 520px;
-    max-height: 100vh;
+    height: auto;
     object-fit: cover;
     display: block;
     border-radius: 0;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -930,6 +925,58 @@ footer {
   max-width: 100%;
   border-radius: 10px;
 }
+
+/* Booking Section Styles */
+.booking-section {
+    padding: 2.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(119,112,84,0.03), rgba(119,112,84,0.01));
+}
+.booking-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    font-family: 'Athene Voyage', serif;
+    color: #fff;
+    background: linear-gradient(90deg, #777054 0%, #DECEBF 100%);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(119,112,84,0.18);
+    text-decoration: none;
+    transform: translateY(40px);
+    opacity: 0;
+    animation: slideInUp 0.8s forwards 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book-now-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(119,112,84,0.25);
+}
+.book-now-btn:focus {
+    outline: 3px solid rgba(222,206,191,0.35);
+    outline-offset: 4px;
+}
+@keyframes pulseBtn {
+    0%{ transform: scale(1); }
+    50%{ transform: scale(1.03); }
+    100%{ transform: scale(1); }
+}
+.book-now-btn.pulse {
+    animation: pulseBtn 1.6s ease-in-out infinite;
+}
+@keyframes slideInUp {
+    to { transform: translateY(0); opacity: 1; }
+}
+
 
 /* Hide burger menu on desktop */
 .burger {
