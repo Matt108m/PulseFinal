@@ -16,7 +16,7 @@
         .booking-section {
             background: linear-gradient(180deg, rgba(119,112,84,0.03), transparent);
             padding: 2rem 1rem;
-        }ss
+        }
         .booking-container {
             max-width: 1100px;
             margin: 0 auto;
@@ -52,7 +52,14 @@
         }
         .book-now-btn.pulse { animation: pulse 2.4s infinite; }
 
-        .book-image { width: 280px; max-width: 35%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); object-fit:cover; }
+        /* image float animation */
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0) rotate(-1deg); }
+        }
+        .book-image { width: 280px; max-width: 35%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); object-fit:cover; transform-origin: center; }
+        .book-image.animate { animation: float 4s ease-in-out infinite; }
 
         /* Responsive: stack and remove gap between hero and about */
         @media (max-width: 800px) {
@@ -101,7 +108,7 @@
             <div class="booking-container">
                 <div class="book-left">
                     <h2>Ready to begin?</h2>
-                    <p>Secure your spot with a quick booking. Friendly classes for all levels.</p>
+                    <!-- removed subheading paragraph as requested -->
                     <!-- Hidden field for future booking URL. Edit the value attribute later to attach the link. -->
                     <input type="hidden" id="book-link" value="">
                     <a id="book-now-anchor" class="book-now-btn pulse" href="#" role="button" aria-labelledby="book-now-text">
@@ -111,7 +118,7 @@
                 </div>
 
                 <div class="book-right">
-                    <img src="Iphone Bench.jpg" alt="Book via app" class="book-image">
+                    <img src="Iphone.jpg" alt="iPhone" class="book-image animate">
                 </div>
             </div>
         </section>
@@ -124,7 +131,7 @@
                 </h1>
                 <div class="about-animated">
                 <div class="about-card about-left">
-                    <img src="a-stand.jpg" alt="A Stand" class="about-img animated-about-img">
+                    <img src="A-Stand.jpg" alt="A Stand" class="about-img animated-about-img">
                     <h2 class="about-heading animated-about-text">Our Studio</h2>
                     <p class="about-desc animated-about-text">Located in the heart of the city, we embody our commitment to accessibility in every form. Come and visit us!</p>
                 </div>
@@ -134,7 +141,7 @@
                     <p class="about-desc animated-about-text">We offer a versatile range of classes for all experience levels, from beginners to advanced, along with specialised sessions led by expert instructors.</p>
                 </div>
                 <div class="about-card about-right">
-                    <img src="instagram.jpg" alt="Instagram" class="about-img animated-about-img">
+                    <img src="Instagram.jpg" alt="Instagram" class="about-img animated-about-img">
                     <h2 class="about-heading animated-about-text">Our Community</h2>
                     <p class="about-desc animated-about-text">Our community is central to everything we do. We want every moment spent with us to feel welcoming and comfortable for everyone. We’re committed to continually learning and improving to make this even better.
 </p>
@@ -185,7 +192,7 @@
                 <!-- Image Grid -->
                 <div class="contact-images">
                     <div class="image-container left">
-                        <img src="Iphone Bench.jpg" alt="Pulse Pilates App" class="contact-img">
+                        <img src="iPhone App.jpg" alt="Pulse Pilates App" class="contact-img">
                     </div>
                     <div class="image-container right">
                         <img src="Business card.jpg" alt="Business Card" class="contact-img">
