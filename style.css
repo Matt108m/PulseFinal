@@ -964,3 +964,15 @@ footer {
 .back-to-top:hover i {
     transform: translateY(-2px);
 }
+
+/* Make about card paragraphs use the same font as the classes subheading
+     —desktop uses 'Cinema Sunday', mobile follows the classes mobile override. */
+.about-desc {
+    font-family: 'Cinema Sunday', cursive;
+}
+
+@media (max-width: 768px) {
+    .about-desc {
+        font-family: 'Athene Voyage', serif !important;
+    }
+}
