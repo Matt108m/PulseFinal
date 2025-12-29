@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,92 +7,6 @@
     <title>Pulse Pilates Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Booking section & mobile gap fixes */
-        /* Ensure hero image doesn't leave extra margin on mobile */
-        .hero-image-container, .splash, #home { margin-bottom: 0; padding-bottom: 0; }
-        .hero-poster { display:block; width:100%; height:auto; margin-bottom:0; }
-
-        /* Booking block styling */
-        .booking-section {
-            background: linear-gradient(180deg, rgba(119,112,84,0.03), transparent);
-            padding: 2rem 1rem;
-        }
-        .booking-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
-        .booking-heading {
-            font-family: 'Athene Voyage', serif;
-            color: #777054;
-            font-size: 1.9rem;
-            margin: 0;
-            text-align: center;
-        }
-        .booking-row {
-            width:100%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap: 1.5rem;
-        }
-        .book-left { flex:1; display:flex; flex-direction:column; gap:.75rem; }
-        .book-left h2 { font-family: 'Athene Voyage', serif; color:#777054; margin:0; font-size:1.8rem; }
-        .book-left p { margin:0; color:#666; font-size:1rem; }
-
-        .book-now-btn {
-            background: #777054;
-            color: #fff;
-            padding: 1.1rem 2.2rem;
-            font-size: 1.6rem;
-            border-radius: 12px;
-            text-decoration: none;
-            display:inline-flex;
-            gap:.6rem;
-            align-items:center;
-            justify-content:center;
-            box-shadow: 0 10px 30px rgba(119,112,84,0.18);
-            transition: transform .15s ease, box-shadow .15s ease;
-            font-family: 'Athene Voyage', serif;
-        }
-        .book-now-btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(119,112,84,0.2); }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(119,112,84,0.35); }
-            70% { box-shadow: 0 0 0 24px rgba(119,112,84,0); }
-            100% { box-shadow: 0 0 0 0 rgba(119,112,84,0); }
-        }
-        .book-now-btn.pulse { animation: pulse 2.4s infinite; }
-
-        /* image float animation */
-        @keyframes float {
-            0% { transform: translateY(0) rotate(-1deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-            100% { transform: translateY(0) rotate(-1deg); }
-        }
-        .book-image { width: 280px; max-width: 35%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); object-fit:cover; transform-origin: center; }
-        .book-image.animate { animation: float 4s ease-in-out infinite; }
-
-        /* Remove any gap between landing and booking on mobile */
-        .splash + .booking-section { margin-top: 0 !important; padding-top: 1rem !important; }
-        @media (max-width: 800px) {
-            /* defensive rules to ensure no gap on mobile */
-            #home, .splash, .hero-image-container { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-            .booking-section { margin-top: 0 !important; padding-top: 0.75rem !important; }
-            .booking-row { flex-direction: column; gap: .75rem; }
-            .booking-container { padding-top: 0.5rem; }
-            .booking-heading { font-size: 1.6rem; }
-            .book-image { max-width: 60%; width: 220px; }
-            .book-left { align-items:center; text-align:center; }
-            .book-now-btn { width:100%; font-size:1.4rem; padding:0.9rem 1rem; }
-            /* force no top gap for about section on mobile */
-            .about-animated-section, .about-animated { margin-top: 0 !important; padding-top: 0 !important; }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -117,28 +32,10 @@
         <section id="home" class="splash">
             <div class="hero-image-container">
                 <img src="IMG_6132.JPG" alt="Pulse Pilates Studio" class="hero-poster">
-                <div class="hero-text">
-                    <h1 class="animated-text" style="font-family: 'Athene Voyage', serif; color: #fff; font-size: 4rem;">Welcome to Pulse Pilates</h1>
-                    <p class="animated-text" style="font-family: 'Cinema Sunday', cursive; color: #fff; font-size: 2.2rem;">Your journey to wellness starts here.</p>
-                </div>
             </div>
-        </section>
-
-        <!-- Booking Section (enhanced, heading above, button+image under) -->
-        <section id="booking" class="booking-section" aria-label="Booking">
-            <div class="booking-container">
-                <h2 class="booking-heading">Ready to begin?</h2>
-
-                <div class="booking-row">
-                    <!-- Hidden field for booking URL (set earlier) -->
-                    <input type="hidden" id="book-link" value="https://app.glofox.com/portal/#/branch/68e932be4a933b4b3808bfa4/classes-day-view">
-                    <a id="book-now-anchor" class="book-now-btn pulse" href="#" role="button" aria-labelledby="book-now-text" target="_blank" rel="noopener">
-                        <span id="book-now-text">Book Now</span>
-                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                    </a>
-
-                    <img src="Iphone.jpg" alt="iPhone" class="book-image animate">
-                </div>
+            <div class="hero-text">
+                <h1 class="animated-text" style="font-family: 'Athene Voyage', serif; color: #fff; font-size: 4rem;">Welcome to Pulse Pilates</h1>
+                <p class="animated-text" style="font-family: 'Cinema Sunday', cursive; color: #fff; font-size: 2.2rem;">Your journey to wellness starts here.</p>
             </div>
         </section>
         <!-- Animated About Us Section -->
@@ -194,7 +91,7 @@
         <div class="class-overlay">
           <h2 class="class-title" style="font-family: 'Athene Voyage', serif;">Reformer Pilates</h2>
           <div class="class-description">
-            <p>Reformer Pilates combines resistance and support from the reformer machine to create a dynamic, full-body workout. Offering everything from gentle rehabilitation to challenging strength training and always engaging and fun. Our classes welcome all levels.</p>
+            <p>Reformer Pilates uses the reformer machine for a dynamic, full-body workout—ranging from gentle rehab to challenging strength training. Fun, engaging, and open to all levels.</p>
           </div>
         </div>
       </div>
@@ -262,24 +159,6 @@
         <i class="fas fa-chevron-up"></i>
     </button>
     <script src="scripts/main.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function(){
-        const input = document.getElementById('book-link');
-        const anchor = document.getElementById('book-now-anchor');
-        if(input && anchor){
-            const url = (input.value || '').trim();
-            if(url) anchor.setAttribute('href', url);
-            anchor.addEventListener('click', function(e){
-                const href = (anchor.getAttribute('href') || '').trim();
-                if(!href || href === '#'){
-                    e.preventDefault();
-                    // small visual feedback if no booking link configured
-                    anchor.classList.remove('pulse');
-                    setTimeout(()=> anchor.classList.add('pulse'), 200);
-                }
-            });
-        }
-    });
-    </script>
 </body>
+</html>
 </html>
