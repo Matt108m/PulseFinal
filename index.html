@@ -127,18 +127,18 @@
             70% { box-shadow: 0 0 0 24px rgba(119,112,84,0); }
             100% { box-shadow: 0 0 0 0 rgba(119,112,84,0); }
         }
-        /* Sync the booking heading with the About Us main heading on desktop and mobile */
-        .booking-heading, .about-main-heading {
+        /* Sync the booking, about, classes and contact headings and match Contact's sizing */
+        .booking-heading, .about-main-heading, .classes-main-heading, .contact-main-heading {
             font-family: 'Athene Voyage', serif;
             color: #777054;
             text-align: center;
-            margin: 0 0 2rem 0; /* keep same spacing as previous inline style */
-            font-size: 3rem; /* desktop-sized baseline */
+            margin: 0 0 2rem 0; /* consistent spacing */
+            font-size: 3rem; /* unified desktop size */
         }
 
         @media (max-width: 800px) {
-            .booking-heading, .about-main-heading {
-                font-size: 1.6rem; /* mobile size to match site scaling */
+            .booking-heading, .about-main-heading, .classes-main-heading, .contact-main-heading {
+                font-size: 3rem; /* keep same size as Contact on mobile */
             }
         }
     </style>
@@ -217,7 +217,7 @@
 
         <!-- Classes Section -->
         <section id="classes" class="classes-section">
-            <h1 class="classes-main-heading" style="font-family: 'Athene Voyage', serif; color: #777054; font-size: 3rem; text-align: center; margin-bottom: 2rem;">
+            <h1 class="classes-main-heading">
                 Classes
             </h1>
             <div class="classes-container">
@@ -246,7 +246,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <h1 class="contact-main-heading" style="font-family: 'Athene Voyage', serif; color: #777054; font-size: 3rem; text-align: center; margin-bottom: 2rem;">
+            <h1 class="contact-main-heading">
                 Contact Us
             </h1>
             <div class="contact-container">
