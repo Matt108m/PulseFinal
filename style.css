@@ -687,8 +687,12 @@ footer {
         grid-template-columns: 1fr;
     }
     .contact-card {
-        width: 85%;
+        width: 90%;
         margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    .about-heading {
+        font-size: 1.8rem;
     }
 }
 
