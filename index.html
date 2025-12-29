@@ -99,10 +99,14 @@
         }
 
         /* Mobile rules */
-        .splash + .booking-section { margin-top: 0 !important; padding-top: 1rem !important; }
+        /* remove extra spacing between splash image and booking on small screens */
+        .splash + .booking-section { margin-top: 0 !important; padding-top: 0 !important; }
+
         @media (max-width: 800px) {
-            #home, .splash, .hero-image-container { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-            .booking-section { margin-top: -1rem !important; padding-top: 0 !important; }
+            /* Ensure splash/hero containers have zero bottom space and hero image doesn't create inline whitespace */
+            #home, .splash, .hero-image-container { margin: 0 !important; padding: 0 !important; }
+            .hero-poster { display: block !important; width: 100% !important; height: auto !important; margin: 0 !important; padding: 0 !important; vertical-align: top !important; }
+            .booking-section { margin-top: 0 !important; padding-top: 0 !important; }
             .booking-row { flex-direction: column; gap: .75rem; }
             .booking-container { padding-top: 0.5rem; }
             .booking-heading { font-size: 1.6rem; }
