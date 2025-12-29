@@ -140,10 +140,18 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.06; /* very subtle */
+            opacity: 0.12; /* slightly more visible */
             z-index: 0;
             pointer-events: none;
             transform: scale(1.02);
+        }
+
+        @media (max-width: 800px) {
+            .booking-section::before {
+                opacity: 0.14; /* slightly stronger on small screens */
+                background-position: center;
+                background-size: cover;
+            }
         }
         /* Sync the booking, about, classes and contact headings and match Contact's sizing */
         .booking-heading, .about-main-heading, .classes-main-heading, .contact-main-heading {
