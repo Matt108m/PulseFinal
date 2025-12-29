@@ -966,13 +966,15 @@ footer {
 }
 
 /* Make about card paragraphs use the same font as the classes subheading
-     —desktop uses 'Cinema Sunday', mobile follows the classes mobile override. */
+     —desktop uses 'Cinema Sunday', mobile uses 'Athene Voyage' and matches class paragraph size. */
 .about-desc {
     font-family: 'Cinema Sunday', cursive;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .about-desc {
         font-family: 'Athene Voyage', serif !important;
+        font-size: 1rem !important; /* match .class-description mobile sizing */
+        line-height: 1.5;
     }
 }
