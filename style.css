@@ -686,6 +686,10 @@ footer {
     .contact-info {
         grid-template-columns: 1fr;
     }
+    .contact-card {
+        width: 85%;
+        margin: 1rem auto;
+    }
 }
 
 /* Responsive Styles */
