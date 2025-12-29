@@ -127,6 +127,20 @@
             70% { box-shadow: 0 0 0 24px rgba(119,112,84,0); }
             100% { box-shadow: 0 0 0 0 rgba(119,112,84,0); }
         }
+        /* Sync the booking heading with the About Us main heading on desktop and mobile */
+        .booking-heading, .about-main-heading {
+            font-family: 'Athene Voyage', serif;
+            color: #777054;
+            text-align: center;
+            margin: 0;
+            font-size: 3rem; /* desktop-sized baseline to match About Us */
+        }
+
+        @media (max-width: 800px) {
+            .booking-heading, .about-main-heading {
+                font-size: 1.6rem; /* mobile size to match site scaling */
+            }
+        }
     </style>
 </head>
 <body>
